@@ -1,0 +1,19 @@
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #001529;
+}
+
+.ant-picker {
+  width: 100% !important;
+}
+
+.w-full {
+  width: 100% !important;
+}

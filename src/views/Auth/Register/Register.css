@@ -1,0 +1,15 @@
+.register {
+    border-radius: 6px !important;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 24px;
+}
+
+.logo-wrapper img {
+    width: 300px;
+    height: auto;
+}
