@@ -32,16 +32,28 @@ const Register = () => {
 
     const handleIsEmailExist = (email) => {
         setIsEmailExist(true)
+
         request.post('/user/isEmailExist', {
             email
         }).then((res) => {
             setIsEmailExist(false)
+
             if (res.data.isExist) {
                 registerForm.setFields([{
                     name: 'email',
-                    errors: ['E-mail exist.']
+                    errors: ['E-mail already exists.']
                 }])
             }
+        })
+        .catch((err) => {
+            setIsEmailExist(false) // Hide loading spinner
+            console.error('Error checking email existence:', err)
+            registerForm.setFields([
+                {
+                    name: 'email',
+                    errors: ['Error checking e-mail. Please try again later.']
+                }
+            ])
         })
     }
 
